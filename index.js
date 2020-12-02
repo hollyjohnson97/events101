@@ -45,9 +45,22 @@ function concatAttacher() {
     input2.addEventListener('change', handleInput);
 }
 
+
 //when mouse enters the div mousewatcher, snitchUpdater is called which displays In or Out
 function snitchAttacher() {
     const mouseWatcher = document.querySelector('#mousewatcher');
     mouseWatcher.addEventListener('mouseover', snitchUpdater);
     mouseWatcher.addEventListener('mouseout', snitchUpdater);
 }
+
+
+function reportAttacher() {
+    const mousereporter = document.querySelector('#mousereporter');
+    mousereporter.addEventListener('mousemove', reportUpdater);
+}
+
+function reportUpdater(event) {
+    const report = document.querySelector('#report');
+    report.textContent = `x: ${event.screenX} y: ${event.screenY}`;
+}
+
