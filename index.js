@@ -28,7 +28,7 @@ function lovelyButtonAttacher() {
     button1.addEventListener('click', lovelyToggle);
 }
 
-
+//this and concatAttacher take 2 input values and concatenate them 
 function handleInput() {
     const out = document.querySelector('#out1');
     const input1 = document.querySelector('#in1').value;
