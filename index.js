@@ -28,7 +28,7 @@ function lovelyButtonAttacher() {
     button1.addEventListener('click', lovelyToggle);
 }
 
-//this and concatAttacher take 2 input values and concatenate them 
+//this and concatAttacher take 2 input values and concatenate them
 function handleInput() {
     const out = document.querySelector('#out1');
     const input1 = document.querySelector('#in1').value;
@@ -45,3 +45,9 @@ function concatAttacher() {
     input2.addEventListener('change', handleInput);
 }
 
+
+function snitchAttacher() {
+    const mouseWatcher = document.querySelector('#mousewatcher');
+    mouseWatcher.addEventListener('mouseover', snitchUpdater);
+    mouseWatcher.addEventListener('mouseout', snitchUpdater);
+}
