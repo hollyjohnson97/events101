@@ -45,7 +45,7 @@ function concatAttacher() {
     input2.addEventListener('change', handleInput);
 }
 
-
+//when mouse enters the div mousewatcher, snitchUpdater is called which displays In or Out
 function snitchAttacher() {
     const mouseWatcher = document.querySelector('#mousewatcher');
     mouseWatcher.addEventListener('mouseover', snitchUpdater);
