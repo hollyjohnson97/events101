@@ -70,3 +70,32 @@ function reportUpdater(event) {
     report.textContent = `x: ${event.screenX} y: ${event.screenY}`;
 }
 
+
+//The input field `newid` is meant for the user to type an ID of an HTML element; IDs cannot have spaces in them,
+// so the field needs to report when the user has a space in there. Write a function `idValidationAttacher` that
+// gives the `newid` input field an event handler that checks the value whenever it has changed (use the `input` event).
+// If the value contains any space, the event handler will add a class `invalid` to the `newid` input element, so that
+// an error message shows.
+
+function idValidationAttacher() {
+    const newid = document.querySelector('#newid');
+    newid.addEventListener('input', handleNewId);
+}
+
+function handleNewId() {
+    const id = document.querySelector('#newid');
+    let idValue = id.value;
+    console.log(idValue);
+    if (idValue.includes(' ')) {
+        id.classList.add('invalid');
+//if a space is removed it needs to remove the error message 
+    } else {
+        id.classList.remove('invalid');
+    }
+}
+
+/*
+console.log('space found');
+        return;
+
+ */

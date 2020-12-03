@@ -275,7 +275,7 @@ test(
     assert.ok(
       window.getComputedStyle(window.newiderror).display === 'none' &&
             !window.newid.classList.contains('invalid'),
-      // "If the value does not have any spaces, the error should be hidden."
+       "If the value does not have any spaces, the error should be hidden."
     );
 
     window.newid.value = ' Khaaaaan!';
